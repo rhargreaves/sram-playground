@@ -1,0 +1,3 @@
+#!/bin/bash
+
+~/Projects/mega-drive/blastem/blastem "$@"

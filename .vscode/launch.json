@@ -1,0 +1,44 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "(gdb) Unit Test",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/tests/bin/unit_tests",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [
+        {
+          "name": "LD_LIBRARY_PATH",
+          "value": "/workspaces/sgdk-project-template/tests/build/deps/cmocka/build/src/"
+        }
+      ],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "type": "gdb",
+      "request": "attach",
+      "name": "BlastEm (GDB)",
+      "executable": "bin/out.elf",
+      "target": "127.0.0.1:1234",
+      "remote": true,
+      "cwd": "${workspaceRoot}",
+      "gdbpath": "gdb"
+    }
+  ]
+}

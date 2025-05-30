@@ -1,0 +1,3 @@
+#!/bin/bash
+
+MEGALINK_PORT=/dev/cu.usbmodem00000000001A1 megalink "$@"

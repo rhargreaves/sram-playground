@@ -1,0 +1,19 @@
+{
+  "name": "sgdk-project-template",
+  "build": {
+    "context": "..",
+    "dockerfile": "../Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "EditorConfig.EditorConfig",
+        "xaver.clang-format"
+      ]
+    }
+  },
+  "postCreateCommand": {
+    "editorconfig": "apt -y install npm nodejs && npm install -g editorconfig"
+  }
+}

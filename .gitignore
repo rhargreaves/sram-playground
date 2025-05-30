@@ -1,0 +1,17 @@
+.DS_Store
+bin/
+*.bin
+*.o
+*.code-workspace
+tests/build/
+tests/bin/
+tests/obj/
+out/
+.idea/
+.vscode/ipch/
+.vscode/*.log
+*.swp
+res/*.s
+src/boot/sega.s
+res/*.h
+.vscode/settings.json

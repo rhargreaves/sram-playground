@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "name": "Docker",
+      "includePath": [
+        "${workspaceFolder}/src",
+        "${workspaceFolder}/res",
+        "${workspaceFolder}/tests/build/deps/cmocka/include",
+        "${workspaceFolder}/tests/unit",
+        "${workspaceFolder}/tests",
+        "/sgdk/inc/**",
+        "/sgdk/res"
+      ],
+      "defines": [
+        "DEBUG"
+      ],
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "linux-gcc-arm64",
+      "configurationProvider": "ms-vscode.cpptools",
+      "compilerPath": "/usr/bin/gcc"
+    }
+  ],
+  "version": 4
+}
