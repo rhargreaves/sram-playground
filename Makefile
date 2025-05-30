@@ -74,8 +74,8 @@ EXTRA_FLAGS := -Werror -Wextra
 LAST_FLAGS := out/last_flags
 CHECK_FLAGS := $(LAST_FLAGS)_$(shell echo $(EXTRA_FLAGS) | md5sum | awk '{ print $$1 }')
 
-release: FLAGS= $(DEFAULT_FLAGS) -O3 -fuse-linker-plugin -fno-web -fno-gcse \
-	-fno-unit-at-a-time -fomit-frame-pointer -flto
+release: FLAGS= $(DEFAULT_FLAGS) -O0 -fuse-linker-plugin -fno-web -fno-gcse \
+	-fno-unit-at-a-time -fomit-frame-pointer
 release: CFLAGS= $(FLAGS)
 release: AFLAGS= $(FLAGS)
 release: LIBMD= $(LIB)/libmd.a
@@ -145,7 +145,7 @@ pre-build:
 
 out/rom.bin: out/rom.out | $(CHECK_FLAGS)
 	$(OBJCPY) -O binary out/rom.out out/rom.bin
-	$(SIZEBND) out/rom.bin -sizealign 524288 -checksum
+	$(SIZEBND) out/rom.bin -sizealign 3145728 -checksum
 
 out/symbol.txt: out/rom.out
 	$(NM) $(LTO_PLUGIN) -n out/rom.out > out/symbol.txt

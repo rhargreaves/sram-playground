@@ -1,5 +1,5 @@
 {
-  "name": "sgdk-project-template",
+  "name": "sram-playground",
   "build": {
     "context": "..",
     "dockerfile": "../Dockerfile"
