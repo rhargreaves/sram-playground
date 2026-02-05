@@ -1,0 +1,11 @@
+ALIGN
+BIN data1 data.bin 524288 2 0 NONE FALSE
+BIN data2 data.bin 524288 2 0 NONE FALSE
+BIN data3 data.bin 524288 2 0 NONE FALSE
+BIN data4 data.bin 524288 2 0 NONE FALSE
+BIN data5 data.bin 524288 2 0 NONE FALSE
+BIN data6 data.bin 524288 2 0 NONE FALSE
+BIN data7 data.bin 524288 2 0 NONE FALSE
+BIN data8 data.bin 524288 2 0 NONE FALSE
+BIN data9 data.bin 524288 2 0 NONE FALSE
+BIN data10 data.bin 524288 2 0 NONE FALSE

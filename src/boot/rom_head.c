@@ -2,7 +2,11 @@
 
 // clang-format off
 __attribute__((externally_visible)) const ROMHeader rom_header = {
+#if (ENABLE_BANK_SWITCH != 0)
+    .console        = "SEGA SSF        ",
+#else
     .console        = "SEGA MEGA DRIVE ",
+#endif
     .copyright      = "(C)             ",
     .title_local    = "DEMONSTRATION PROGRAM                           ",
     .title_int      = "DEMONSTRATION PROGRAM                          ",
