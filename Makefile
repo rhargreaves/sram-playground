@@ -143,9 +143,12 @@ pre-build:
 	@$(MKDIR) -p $(SRC)/boot
 	@$(MKDIR) -p out
 
+# ROM_SIZE := 3145728
+ROM_SIZE := 524288
+
 out/rom.bin: out/rom.out | $(CHECK_FLAGS)
 	$(OBJCPY) -O binary out/rom.out out/rom.bin
-	$(SIZEBND) out/rom.bin -sizealign 3145728 -checksum
+	$(SIZEBND) out/rom.bin -sizealign $(ROM_SIZE) -checksum
 
 out/symbol.txt: out/rom.out
 	$(NM) $(LTO_PLUGIN) -n out/rom.out > out/symbol.txt
