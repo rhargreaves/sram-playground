@@ -6,4 +6,3 @@ SortIncludes: false
 AllowShortBlocksOnASingleLine: Empty
 AllowShortIfStatementsOnASingleLine: Never
 AllowShortLoopsOnASingleLine: false
-SpaceBeforeParens: ControlStatementsExceptControlMacros

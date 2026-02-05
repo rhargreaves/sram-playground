@@ -7,13 +7,14 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-vscode.cpptools",
         "EditorConfig.EditorConfig",
+        "llvm-vs-code-extensions.vscode-clangd",
         "xaver.clang-format"
       ]
     }
   },
   "postCreateCommand": {
-    "editorconfig": "apt -y install npm nodejs && npm install -g editorconfig"
+    "editorconfig": "apt -y install npm nodejs && npm install -g editorconfig",
+    "clangd": "apt -y install clangd clang-format"
   }
 }
