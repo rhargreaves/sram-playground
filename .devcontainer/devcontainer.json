@@ -8,8 +8,7 @@
     "vscode": {
       "extensions": [
         "EditorConfig.EditorConfig",
-        "llvm-vs-code-extensions.vscode-clangd",
-        "xaver.clang-format"
+        "llvm-vs-code-extensions.vscode-clangd"
       ]
     }
   },
