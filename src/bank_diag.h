@@ -1,3 +1,3 @@
 #pragma once
 
-void test_banks(void);
+void bank_diag(void);

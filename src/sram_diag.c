@@ -2,9 +2,9 @@
 #include "sram_ed_x7.h"
 #include <genesis.h>
 
-void test_sram(void)
+void sram_diag(void)
 {
-    CON_write("SRAM Test Program\n-----------------\n");
+    CON_write("SRAM Tests\n----------\n");
 
     sram_ed_x7_enable(TRUE);
     const u8 test_data = 0x53;

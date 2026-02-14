@@ -2,8 +2,7 @@
 #include "config.h"
 #include "data.h"
 #include "mapper.h"
-#include "vdp.h"
-#include "vdp_bg.h"
+#include "ui.h"
 
 static const void* NEAR_BANKS[] = {
     data1,
@@ -16,30 +15,6 @@ static const void* NEAR_BANKS[] = {
 };
 
 static const void* FAR_BANKS[] = { data8, data9, data10 };
-
-static void print_pass(void)
-{
-    VDP_setTextPalette(PAL2);
-    CON_write("Pass\n");
-    VDP_setTextPalette(PAL0);
-}
-
-static void print_fail(void)
-{
-    VDP_setTextPalette(PAL1);
-    CON_write("Fail\n");
-    VDP_setTextPalette(PAL0);
-}
-
-static void print_result(bool res)
-{
-    if (res) {
-        print_pass();
-    } else {
-        print_fail();
-    }
-    // SYS_getBank(u16 regionIndex)
-}
 
 static void test_bank_at(const void* addr)
 {
@@ -59,7 +34,7 @@ static void test_far_bank_at(const void* addr)
     print_result(*((char*)FAR(addr)) == 0x31);
 }
 
-void test_banks(void)
+void bank_diag(void)
 {
     CON_write("Bank Test Program\n-----------------\n");
     CON_write("ENABLE_BANK_SWITCH: %i\n", ENABLE_BANK_SWITCH);
@@ -76,5 +51,5 @@ void test_banks(void)
         test_far_bank_at(FAR_BANKS[i]);
     }
 
-    CON_write("Done");
+    CON_write("Done\n");
 }

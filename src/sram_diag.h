@@ -1,3 +1,3 @@
 #pragma once
 
-void test_sram(void);
+void sram_diag(void);
